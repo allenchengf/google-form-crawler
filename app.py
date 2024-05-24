@@ -47,80 +47,86 @@ def main():
     original_window = driver.current_window_handle
     driver.implicitly_wait(90)
 
-    try:
-        rand = random.randint(4, 5)
+    for i in range(random.randint(10, 15)):
+        # driver.execute_script("window.open('');")
+        # driver.switch_to.window(driver.window_handles[1])
+        driver.switch_to.new_window('tab')
+        driver.get('https://docs.google.com/forms/d/e/1FAIpQLSf9mSE9L6Wyq45rTlYypGEimQpMP3_6ysg7_3UFzWo6l2hjsA/viewform')
 
-        # 第一段
-        radiobuttons = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[2]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
-        driver.execute_script("arguments[0].click();", radiobuttons)
+        try:
+            rand = random.randint(4, 5)
 
-        radiobuttons2 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[3]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
-        driver.execute_script("arguments[0].click();", radiobuttons2)
+            # 第一段
+            radiobuttons = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[2]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
+            driver.execute_script("arguments[0].click();", radiobuttons)
 
-        radiobuttons3 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[4]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
-        driver.execute_script("arguments[0].click();", radiobuttons3)
+            radiobuttons2 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[3]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
+            driver.execute_script("arguments[0].click();", radiobuttons2)
 
-        radiobuttons4 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[5]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
-        driver.execute_script("arguments[0].click();", radiobuttons4)
+            radiobuttons3 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[4]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
+            driver.execute_script("arguments[0].click();", radiobuttons3)
 
-        radiobuttons5 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[6]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
-        driver.execute_script("arguments[0].click();", radiobuttons5)
+            radiobuttons4 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[5]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
+            driver.execute_script("arguments[0].click();", radiobuttons4)
 
-        # 第二段
-        radiobuttons6 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[8]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
-        driver.execute_script("arguments[0].click();", radiobuttons6)
+            radiobuttons5 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[6]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
+            driver.execute_script("arguments[0].click();", radiobuttons5)
 
-        radiobuttons7 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[9]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
-        driver.execute_script("arguments[0].click();", radiobuttons7)
+            # 第二段
+            radiobuttons6 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[8]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
+            driver.execute_script("arguments[0].click();", radiobuttons6)
 
-        radiobuttons8 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[10]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
-        driver.execute_script("arguments[0].click();", radiobuttons8)
+            radiobuttons7 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[9]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
+            driver.execute_script("arguments[0].click();", radiobuttons7)
 
-        radiobuttons9 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[11]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
-        driver.execute_script("arguments[0].click();", radiobuttons9)
+            radiobuttons8 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[10]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
+            driver.execute_script("arguments[0].click();", radiobuttons8)
 
-        radiobuttons10 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[12]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
-        driver.execute_script("arguments[0].click();", radiobuttons10)
+            radiobuttons9 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[11]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
+            driver.execute_script("arguments[0].click();", radiobuttons9)
 
-        # 第三段
-        radiobuttons11 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[14]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]')
-        driver.execute_script("arguments[0].click();", radiobuttons11)
+            radiobuttons10 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[12]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
+            driver.execute_script("arguments[0].click();", radiobuttons10)
 
-        radiobuttons12 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[15]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
-        driver.execute_script("arguments[0].click();", radiobuttons12)
+            # 第三段
+            radiobuttons11 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[14]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]')
+            driver.execute_script("arguments[0].click();", radiobuttons11)
 
-        radiobuttons13 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[16]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
-        driver.execute_script("arguments[0].click();", radiobuttons13)
+            radiobuttons12 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[15]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
+            driver.execute_script("arguments[0].click();", radiobuttons12)
 
-        radiobuttons14 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[17]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
-        driver.execute_script("arguments[0].click();", radiobuttons14)
+            radiobuttons13 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[16]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
+            driver.execute_script("arguments[0].click();", radiobuttons13)
 
-        radiobuttons15 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[18]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
-        driver.execute_script("arguments[0].click();", radiobuttons15)
+            radiobuttons14 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[17]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
+            driver.execute_script("arguments[0].click();", radiobuttons14)
 
-        # 第四段
-        radiobuttons16 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[20]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
-        driver.execute_script("arguments[0].click();", radiobuttons16)
+            radiobuttons15 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[18]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
+            driver.execute_script("arguments[0].click();", radiobuttons15)
 
-        radiobuttons17 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[21]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
-        driver.execute_script("arguments[0].click();", radiobuttons17)
+            # 第四段
+            radiobuttons16 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[20]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
+            driver.execute_script("arguments[0].click();", radiobuttons16)
 
-        radiobuttons18 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[22]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
-        driver.execute_script("arguments[0].click();", radiobuttons18)
+            radiobuttons17 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[21]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
+            driver.execute_script("arguments[0].click();", radiobuttons17)
 
-        radiobuttons19 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[23]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
-        driver.execute_script("arguments[0].click();", radiobuttons19)
+            radiobuttons18 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[22]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
+            driver.execute_script("arguments[0].click();", radiobuttons18)
 
-        radiobuttons20 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[24]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
-        driver.execute_script("arguments[0].click();", radiobuttons20)
+            radiobuttons19 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[23]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
+            driver.execute_script("arguments[0].click();", radiobuttons19)
+
+            radiobuttons20 = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[24]/div/div/div[2]/div/span/div/label['+str(get_random_number())+']/div[2]/div/div')
+            driver.execute_script("arguments[0].click();", radiobuttons20)
 
 
-        submit = driver.find_element(By.XPATH, '// *[ @ id = "mG61Hd"] / div[2] / div / div[3] / div / div[1] / div')
-        driver.execute_script("arguments[0].click();", submit)
+            submit = driver.find_element(By.XPATH, '// *[ @ id = "mG61Hd"] / div[2] / div / div[3] / div / div[1] / div')
+            driver.execute_script("arguments[0].click();", submit)
 
-    except requests.exceptions.RequestException as e:
-        logging_message(e)
-        print(e)
+        except requests.exceptions.RequestException as e:
+            logging_message(e)
+            print(e)
 
     time.sleep(3)
 
